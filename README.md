@@ -19,12 +19,13 @@ Transforma secuencialmente los caracteres dado un string (texto) tal como lo hac
 	`$("selector").entelCharacts();`
 
 ## Opciones
-
-	clase: "upper", // clase CSS que definirá el cambio en el caracter
-	intervalo: 1000, // tiempo en ms en que cambia la clase
-    separador: "span",  // selector que separará cada caracter
-    onCreate: function(){}, // callback cuando inicia
-    onInterval: function(){} // callback cuando inicia cada nueva secuecia
+	entelCharacts({
+		clase: "upper", // clase CSS que definirá el cambio en el caracter
+		intervalo: 1000, // tiempo en ms en que cambia la clase
+    	separador: "span",  // selector que separará cada caracter
+    	onCreate: function(){}, // callback cuando inicia
+    	onInterval: function(){} // callback cuando inicia cada nueva secuecia
+    });
 
 #### [demo/](https://github.com/juanbrujo/jquery-entelCharacts/tree/master/demo)
 
