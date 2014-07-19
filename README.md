@@ -29,15 +29,15 @@ Transforma secuencialmente los caracteres dado un string (texto) tal como lo hac
 
 #### [demo/](https://github.com/juanbrujo/jquery-entelCharacts/tree/master/demo)
 
-Contains a simple HTML file to demonstrate your plugin.
+HTML/CSS demo con plugin funcionando.
 
 #### [dist/](https://github.com/juanbrujo/jquery-entelCharacts/tree/master/dist)
 
-This is where the generated files are stored once Grunt runs.
+Plugin final, con y sin minificar.
 
 #### [src/](https://github.com/juanbrujo/jquery-entelCharacts/tree/master/src)
 
-Contains the files responsible for your plugin, you can choose between JavaScript or CoffeeScript.
+El plugin crudo, sin procesar.
 
 
 ## Disclaimer
