@@ -1,5 +1,5 @@
 /*
- *  jQuery entelCharacts - v0.1
+ *  jQuery entelCharacts - v0.2
  *  Transforma secuencialmente los caracteres dado un string (texto) tal como lo hace Entel en su publicidad.
  *
  *  https://github.com/juanbrujo/jquery-entelCharacts
@@ -15,6 +15,7 @@
             clase: "upper",
             intervalo: 1000,
             separador: "span",
+            incluyeChild: true,
             
             onCreate: function(){},
             onInterval: function(){}
@@ -35,8 +36,16 @@
 
 				elem.each(function(){
 					var elem 		= $(this),
-						characters 	= elem.text().split(""),
-						content 	= "";
+                        content     = "",
+                        tmp,
+                        characters;
+
+                    if(plugin.settings.incluyeChild === true) {
+                        tmp         = elem.children().remove(),
+                        characters  = elem.contents().filter(function(){ return this.nodeType === 3; }).text().split("");
+                    } else {
+                        characters  = elem.text().split("");
+                    }
 
 					elem.empty();
 
@@ -44,7 +53,11 @@
 				        content += "<" + plugin.settings.separador + ">" + characters[i] + "</" + plugin.settings.separador + ">"; 
 				    }
 
-				    elem.append(content);
+                    if(plugin.settings.incluyeChild === true) {
+				        elem.append(content).append(tmp);
+                    } else {
+                        elem.append(content);
+                    }
 
 				    setInterval(function(){
 				    	swapClass(elem,clase,characters.length);
@@ -53,11 +66,19 @@
 				    }, intervalo);
 				});
 				
-				function swapClass(elem,clase,howMany){
-					idx = Math.floor(Math.random() * howMany);
-					elem.find(plugin.settings.separador).removeClass(clase).eq(idx).addClass(clase);
-				}
+                function isEmpty( elem ){
+                    return !$.trim(elem.html());
+                }
 
+				function swapClass(elem,clase,howMany){
+					var idx = Math.floor(Math.random() * howMany),
+                    current = elem.find(plugin.settings.separador).eq(idx);
+                    
+                    if (!isEmpty(current)) {
+                        current.addClass(clase).siblings().removeClass(clase);
+                    }
+				}
+                
 			};
 
 			entelMix(elem,plugin.settings.clase,plugin.settings.intervalo);

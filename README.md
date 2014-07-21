@@ -23,6 +23,7 @@ Transforma secuencialmente los caracteres dado un string (texto) tal como lo hac
 		clase: "upper", // clase CSS que definirá el cambio en el caracter
 		intervalo: 1000, // tiempo en ms en que cambia la clase
     	separador: "span",  // selector que separará cada caracter
+    	incluyeChild: true, // detecta si elemento tiene hijos y los conserva o los separa
     	onCreate: function(){}, // callback cuando inicia
     	onInterval: function(){} // callback cuando inicia cada nueva secuecia
     });
