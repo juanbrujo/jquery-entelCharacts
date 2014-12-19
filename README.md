@@ -6,12 +6,9 @@ Transforma secuencialmente los caracteres dado un string (texto) tal como lo hac
 
 ## Uso
 
-1. Incluye jQuery:
+1. Incluye jQuery y este plugin:
 
 	`<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>`
-
-2. Incluye este plugin:
-
 	`<script src="dist/jquery.entelCharacts.min.js"></script>`
 
 3. Inicialízalo:
@@ -25,7 +22,7 @@ Transforma secuencialmente los caracteres dado un string (texto) tal como lo hac
     	separador: "span",  // selector que separará cada caracter
     	incluyeChild: true, // detecta si elemento tiene hijos y los conserva o los separa
     	onCreate: function(){}, // callback cuando inicia
-    	onInterval: function(){} // callback cuando inicia cada nueva secuecia
+    	onInterval: function(){} // callback cuando inicia cada nueva secuencia
     });
 
 #### [demo/](https://github.com/juanbrujo/jquery-entelCharacts/tree/master/demo)
