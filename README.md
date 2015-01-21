@@ -1,6 +1,8 @@
 # jQuery entelCharacts
 
-Transforma secuencialmente los caracteres dado un string (texto) tal como lo hace Entel en su publicidad con un poco de **CSS** y **JavaScript**
+Transforma secuencialmente los caracteres dado un string (texto) tal como lo hace Entel en su publicidad con un poco de **CSS** y **JavaScript**. 
+
+[Demo](http://juanbrujo.github.io/jquery-entelCharacts/)
 
 ![jQuery-entelCharacts.js](https://dl.dropboxusercontent.com/u/3522/vivirmejorconectados.gif)
 
