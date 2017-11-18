@@ -13,8 +13,9 @@ Transforma secuencialmente los caracteres dado un string (texto) tal como lo hac
 ```html
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="dist/jquery.entelCharacts.min.js"></script>
+```
 
-3. Inicialízalo:
+2. Inicialízalo:
 
 ```javascript
 $("selector").entelCharacts();
